@@ -1,0 +1,137 @@
+/* setting font size to use with rems */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+body form {
+  background-color: rgba(157, 157, 184, 0.075);
+  border-radius: 5px;
+  display: inline-block;
+  padding: 3rem;
+  width: 40%;
+  max-width: 475px;
+}
+
+body form h1 {
+  color: black;
+  font-size: 4rem;
+}
+
+body form .icon-wrapper {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+  display: block;
+}
+
+body form .label-container, body form label, body form input {
+  display: block;
+}
+
+body form label, body form input {
+  width: 100%;
+}
+
+body form label {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+body form input {
+  margin-bottom: 2rem;
+  line-height: 1.75rem;
+  border: none;
+  border-bottom: 1.45px solid black;
+  background-color: rgba(157, 157, 184, 0.001);
+  font-size: 1.25rem;
+}
+
+body form input:focus {
+  outline: none;
+  -webkit-box-shadow: 0 5px 6px -6px black;
+          box-shadow: 0 5px 6px -6px black;
+}
+
+body form button {
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: .5rem 1rem;
+  margin: 4rem 2rem;
+}
+
+body form button:hover {
+  cursor: pointer;
+}
+
+body form button:focus {
+  outline: none;
+}
+
+.shake-effect {
+  -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+          animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+@-webkit-keyframes shake {
+  10%, 90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+            transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+            transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+            transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+            transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+            transform: translate3d(4px, 0, 0);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  form {
+    width: 70% !important;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
+

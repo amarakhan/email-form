@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Email Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+    <form action="https://formspree.io/amaraskhan@gmail.com" method="post">
+        <h1>Email Us</h1>
+        <span class="icon-wrapper"><i class="far fa-paper-plane"></i></span>
+        <div class="label-container">
+            <label for="email"> Email</label>
+            <input type="email" name="email" placeholder="email@gmail.com" required>
+            <label for="subject">Subject</label>
+            <input type="text" name="subject">
+            <label for="message">Message</label>
+            <input type="text" name="message" required>
+        </div>
+        <button type="submit" class="submit">Send</button>
+        <button type="reset" class="reset">Reset</button>
+    </form>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
