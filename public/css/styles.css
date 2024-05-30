@@ -1,137 +1,210 @@
 /* setting font size to use with rems */
 html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  font-size: 10px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: 10px;
 }
 
 body {
-  font-size: 1.5rem;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  padding: 5rem 0;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 body form {
-  background-color: rgba(157, 157, 184, 0.075);
-  border-radius: 5px;
-  display: inline-block;
-  padding: 3rem;
-  width: 40%;
-  max-width: 475px;
+    background-color: rgba(157, 157, 184, 0.075);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    margin: 3rem;
+    width: 90%;
+    max-width: 475px;
+    height: auto;
 }
 
-body form h1 {
-  color: black;
-  font-size: 4rem;
+h1 {
+    color: black;
+    font-size: 4rem;
 }
 
-body form .icon-wrapper {
-  font-size: 2rem;
-  padding-bottom: 2rem;
-  display: block;
+.icon-wrapper {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    display: block;
 }
 
-body form .label-container, body form label, body form input {
-  display: block;
+.label-container, label, input {
+    display: block;
+    margin-bottom: 2rem;
 }
 
-body form label, body form input {
-  width: 100%;
+label, input {
+    width: 100%;
 }
 
-body form label {
-  text-align: left;
-  margin-bottom: 1rem;
+label {
+    text-align: left;
+    margin-bottom: 1rem;
 }
 
-body form input {
-  margin-bottom: 2rem;
-  line-height: 1.75rem;
-  border: none;
-  border-bottom: 1.45px solid black;
-  background-color: rgba(157, 157, 184, 0.001);
-  font-size: 1.25rem;
+input {
+    margin-bottom: 2rem;
+    line-height: 1.75rem;
+    border: none;
+    border-bottom: 1.45px solid black;
+    background-color: rgba(157, 157, 184, 0.001);
+    font-size: 1.25rem;
 }
 
-body form input:focus {
-  outline: none;
-  -webkit-box-shadow: 0 5px 6px -6px black;
-          box-shadow: 0 5px 6px -6px black;
+input:focus {
+    outline: none;
+    box-shadow: 0 5px 6px -6px black;
 }
 
-body form button {
-  background-color: black;
-  color: white;
-  border: none;
-  font-size: 1.5rem;
-  text-align: center;
-  padding: .5rem 1rem;
-  margin: 4rem 2rem;
+.button-container {
+    margin-bottom: 2rem;
 }
 
-body form button:hover {
-  cursor: pointer;
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: .75rem 1rem;
+    margin: 10px auto;
+    width: 100%;
 }
 
-body form button:focus {
-  outline: none;
+button:hover {
+    cursor: pointer;
 }
 
+button:focus {
+    outline: none;
+}
+
+/* Overlay styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+    color: white;
+    font-size: 2rem;
+}
+
+.overlay i {
+    margin-right: 10px;
+}
+
+.overlay p {
+    margin: 0;
+}
+
+/* Loading spinner animation */
+.loading-dots {
+    display: flex;
+}
+
+.loading-dots .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: loading 1s infinite;
+}
+
+.loading-dots .dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-dots .dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes loading {
+    0%, 80%, 100% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.5);
+    }
+}
+
+/* Shake animation */
 .shake-effect {
-  -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-          animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-}
-
-@-webkit-keyframes shake {
-  10%, 90% {
-    -webkit-transform: translate3d(-1px, 0, 0);
-            transform: translate3d(-1px, 0, 0);
-  }
-  20%, 80% {
-    -webkit-transform: translate3d(2px, 0, 0);
-            transform: translate3d(2px, 0, 0);
-  }
-  30%, 50%, 70% {
-    -webkit-transform: translate3d(-4px, 0, 0);
-            transform: translate3d(-4px, 0, 0);
-  }
-  40%, 60% {
-    -webkit-transform: translate3d(4px, 0, 0);
-            transform: translate3d(4px, 0, 0);
-  }
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
 }
 
 @keyframes shake {
-  10%, 90% {
-    -webkit-transform: translate3d(-1px, 0, 0);
-            transform: translate3d(-1px, 0, 0);
-  }
-  20%, 80% {
-    -webkit-transform: translate3d(2px, 0, 0);
-            transform: translate3d(2px, 0, 0);
-  }
-  30%, 50%, 70% {
-    -webkit-transform: translate3d(-4px, 0, 0);
-            transform: translate3d(-4px, 0, 0);
-  }
-  40%, 60% {
-    -webkit-transform: translate3d(4px, 0, 0);
-            transform: translate3d(4px, 0, 0);
-  }
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
 }
 
+/* Responsive styles */
 @media screen and (max-width: 650px) {
-  form {
-    width: 70% !important;
-  }
+    body form {
+      width: 90%;
+    }
 }
-/*# sourceMappingURL=styles.css.map */
 
+@media screen and (max-width: 450px) {
+    body {
+      padding: 0;
+      height: 100vh;
+      align-items: flex-start;
+    }
+    
+    body form {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      border-radius: 0;
+      padding: 2rem;
+      box-sizing: border-box;
+      justify-content: flex-start;
+    }
+}
+
+/* Hidden class */
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+}
