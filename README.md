@@ -24,8 +24,8 @@ This project is a simple email form built using HTML, CSS, and JavaScript. It in
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/yourusername/email-form-project.git
-   cd email-form-project
+   git clone https://github.com/amarakhan/email-form.git
+   cd email-form
    ```
 
 2. **Install dependencies:**
@@ -49,7 +49,7 @@ This project is a simple email form built using HTML, CSS, and JavaScript. It in
 1. **Run the server:**
 
    ```sh
-   node server.js
+   node index.js
    ```
 
 2. **Open your browser and navigate to:**
