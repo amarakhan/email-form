@@ -44,7 +44,15 @@ app.post('/api/send-email', async (req, res) => {
         }
     } catch (error) {
         console.error('Error sending email:', error);
-        res.status(500).json({ message: 'Internal Server Error' });
+        let resBody = { 
+            message: error.message || 'Internal Server Error', 
+        };
+
+        if (error.code) {
+            resBody.code = error.code;
+        }
+
+        res.status(error.status || 500).json(resBody);
     }
 
     // // Testing block:
