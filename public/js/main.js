@@ -29,21 +29,21 @@ async function handleFormSubmit(event) {
 
     try {
         // Call the API to send the email
-        const response = await fetch("/api/send-email", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(data),
-        });
+        // const response = await fetch("/api/send-email", {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify(data),
+        // });
 
-        hideLoading();
+        // hideLoading();
 
-        if (response.ok) {
+        // if (response.ok) {
             showSuccessMessage();
-        } else {
-            showErrorMessage();
-        }
+        // } else {
+        //     showErrorMessage();
+        // }
     } catch (error) {
         console.error("Error:", error);
         showErrorMessage();
