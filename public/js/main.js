@@ -37,10 +37,10 @@ async function handleFormSubmit(event) {
         //     body: JSON.stringify(data),
         // });
 
-        // hideLoading();
+        hideLoading();
 
         // if (response.ok) {
-            showSuccessMessage();
+        showSuccessMessage();
         // } else {
         //     showErrorMessage();
         // }
